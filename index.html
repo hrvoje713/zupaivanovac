@@ -3,64 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Michael's Parish - Latest News</title>
+    <title>Parish Bulletin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1>St. Michael's Parish News</h1>
-        <p>Stay updated with our community activities and events</p>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Župa svete Rozalije Ivanovac</h1>
+            <p class="subtitle">Zupne obavijesti</p>
+        </div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title">Latest Updates</h2>
-        
-        <div class="news-grid">
-            <!-- News Article 1 -->
-            <article class="news-card">
-                <div class="card-image" style="background-image: url('news1.jpg')"></div>
-                <div class="card-content">
-                    <div class="news-date">July 15, 2023</div>
-                    <h3 class="news-title">Annual Parish Festival Announcement</h3>
-                    <p class="news-excerpt">Join us for our yearly parish festival featuring food, games, and community bonding. This year's theme is "Building Faith Together".</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
+    <main class="content-wrapper">
+        <section class="document-container">
+            <!-- Replace with your Google Docs embed code -->
+            <iframe 
+                class="google-doc"
+                src="https://docs.google.com/document/d/e/2PACX-1vTVrTMAt9OkGLDD2WTEIt_oYh9NlQFUrY8RtdETH6sak1jRm1KgMjvfk4SF_-Dhrw/pub?embedded=true"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </section>
+    </main>
 
-            <!-- News Article 2 -->
-            <article class="news-card">
-                <div class="card-image" style="background-image: url('news2.jpg')"></div>
-                <div class="card-content">
-                    <div class="news-date">July 12, 2023</div>
-                    <h3 class="news-title">New Youth Ministry Program Launch</h3>
-                    <p class="news-excerpt">We're excited to announce our revamped youth ministry program starting this August. Open to teenagers 13-18 years old.</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!-- News Article 3 -->
-            <article class="news-card">
-                <div class="card-image" style="background-image: url('news3.jpg')"></div>
-                <div class="card-content">
-                    <div class="news-date">July 10, 2023</div>
-                    <h3 class="news-title">Food Drive Results</h3>
-                    <p class="news-excerpt">Thanks to your generosity, we collected over 2,000 pounds of food for local families in need. See how we're making a difference.</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Župa svete Rozalije Ivanovac</p>
+            <nav class="footer-links">
+                <a href="/contact">Kontakt</a>
+            </nav>
         </div>
-
-        <div class="load-more-container">
-            <button class="load-more-btn">
-                Load More News
-            </button>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2023 St. Michael's Parish. All rights reserved.</p>
-        <p class="footer-contact">Contact us: parish@stmichaels.example.com | (555) 123-4567</p>
     </footer>
+
+    <script>
+        // Auto-update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
