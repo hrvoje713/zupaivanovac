@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zupa Svete Rozalije - Zupne obavijesti</title>
+    <title>Župa Svete Rozalije - Župne Obavijesti</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabs.css">
 </head>
 <body>
     <header class="main-header">
         <div class="header-content">
             <h1>Župa svete Rozalije Ivanovac</h1>
-            <p class="subtitle">Zupne obavijesti</p>
+            <p class="subtitle">Župne obavijesti</p>
         </div>
     </header>
 
+    <!-- Tab Navigation -->
+    <div class="tab-container">
+        <button class="tab active" onclick="openTab(event, 'pocetna')">Početna</button>
+        <button class="tab" onclick="openTab(event, 'prijave')">Prijave</button>
+    </div>
+
     <main class="content-wrapper">
-        <section class="document-container">
-            <!-- Replace with your Google Docs embed code -->
+        <!-- Tab Content: Početna -->
+        <section id="pocetna" class="tab-content active">
             <iframe 
                 class="google-doc"
                 src="https://docs.google.com/document/d/e/2PACX-1vTVrTMAt9OkGLDD2WTEIt_oYh9NlQFUrY8RtdETH6sak1jRm1KgMjvfk4SF_-Dhrw/pub?embedded=true"
                 frameborder="0"
                 allowfullscreen>
             </iframe>
+        </section>
+
+        <!-- Tab Content: Prijave -->
+        <section id="prijave" class="tab-content">
+            <p>Ovdje možete podnijeti prijave za različite aktivnosti.</p>
+            <!-- Add any form or content here -->
         </section>
     </main>
 
@@ -39,6 +52,18 @@
     <script>
         // Auto-update copyright year
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Tab Navigation Logic
+        function openTab(event, tabId) {
+            let tabs = document.querySelectorAll('.tab');
+            let contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
     </script>
 </body>
 </html>
