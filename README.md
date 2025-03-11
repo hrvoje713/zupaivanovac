@@ -1,1 +1,1 @@
-# zupaivanovac
+# Zupne obavijesti za zupu Ivanovac
